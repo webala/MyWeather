@@ -1,4 +1,5 @@
 import requests
+import json
 from flask import Flask, request, render_template, jsonify
 from flask_bootstrap import Bootstrap
 from datetime import time
@@ -22,11 +23,11 @@ def index():
 
 @app.route('/weather', methods=['POST'])
 def get_weather():
-    
-    city = request.json['region']
+    region = request.json['region']
+    print(region)
     response = {}
-    req = requests.get(open_weather_api_endpoint.format(city, open_weather_api_key))
-    print(city, req.text)
+    req = requests.get(open_weather_api_endpoint.format(region, open_weather_api_key))
+    print(region, req.text)
 
     response = req.json()
     print (response['cod'])

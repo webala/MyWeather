@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecom</title>
+    <title>Weather App</title>
 
     <!-- Latest compiled and minified Bootstrap CSS -->
 
@@ -14,7 +14,62 @@
 
     <!--Local CSS-->
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
+    <div class="dark-layer"></div>
+    <img src="/static/images/backgrond.jpg" alt="" class="background-img">
+    <div class="menu-icon">
+        <i class="uil uil-ellipsis-v menu-btn" ></i>
+    </div>
+    <section class="main">
+        <div class="humbuger-menu">
+            <i class="uil uil-multiply close-btn"></i>
+            <a href="">Report Issue</a>
+            <a href="">Go to source code</a>
+        </div>
+        <header>
+            <h1>Get Weather</h1>
+            <nav class="nav-section">
+                <a href="">Report Issue</a>
+                <a href="">Go to source code</a>
+            </nav>
+        </header>
+        <div class="search-form">
+            <form id="region-form">
+                <input type="text" placeholder="Country or region" class="form-control w-25" name="region">
+                <input type="submit" class="btn submit-btn btn-sm btn-outline-primary" placeholder="Get weather">
+            </form>
+        </div>
 
+        
+        <div class="info active">
+            <div id="instruction" class="active">
+                <h2>Get real time weather data <i class="uil uil-smile-beam"></i> <span> Enter country or region.</span></h2>
+            </div>
+    
+            <div class="d-none" id="info-text">
+                <h2>Loading data. Please wait <i class="uil uil-spinner"></i></h2>
+            </div>
+        </div>
+        
+
+        <div class="weather-showcase d-none">
+            <div>
+                <h1 class="counrty">Nairobi KE</h1>
+                <i class="uil uil-cloud-sun"></i>
+            </div>
+            <div class="temp-data">
+                <p>Temp: <span class="temp">298.77 K</span></p>
+                <p>Min Temp: <span class="temp-min">298.77 K</span></p>
+                <p>Max Temp: <span class="temp-max">299.24 K</span></p>
+            </div>
+            <div class="other-data">
+                <p>Humidity: <span class="humidity">44</span> </p>
+                <p>Visibility: <span  class="visibility">10000</span> </p>
+                <p>Wind Speed: <span  class="wind-speed">3.09 Knots</span> </p>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/main.js" defer></script>
 </body>
